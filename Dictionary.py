@@ -71,3 +71,52 @@ print(student)
     # looping through dictionaries
     # check if a key exists using in keyword
 
+student = {
+    "name": "Eve",
+    "age": 22,
+    "major": "Biology"
+}
+
+# Using .keys(), .values(), and .items()
+print(student.keys())    # Output: dict_keys(['name', 'age', 'major'])
+print(student.values())  # Output: dict_values(['Eve', 22, 'Biology'])
+print(student.items())   # Output: dict_items([('name', 'Eve'), ('age', 22), ('major', 'Biology')])
+
+# Looping through a dictionary
+for key, value in student.items():
+    print(f"{key}: {value}")
+
+# Check if a key exists
+if "GPA" in student:
+    print("GPA is:", student["GPA"])
+else:
+    print("GPA key not found")
+    
+# 6. nesting dictionaries
+school = {
+    "student1": {"name": "Alice", "age": 20, "GPA": 3.9},
+    "student2": {"name": "Bob", "age": 21, "GPA": 3.6},
+}
+
+# Accessing nested dictionary values
+print(school["student1"]["name"])  # Output: Alice
+print(school["student2"]["GPA"])   # Output: 3.6
+
+# 7. real-world application of dictionaries 
+inventory = {
+    "item1": {"name": "Laptop", "price": 1200, "stock": 10},
+    "item2": {"name": "Smartphone", "price": 800, "stock": 15},
+}
+
+# Checking stock for each item
+for item_id, details in inventory.items():
+    print(f"{details['name']}: ${details['price']} - {details['stock']} in stock")
+
+# 8. class activity: building a contact list
+# Starting code
+contacts = {}
+
+# Add a contact
+contacts["Alice"] = {"phone": "123-456-7890", "email": "alice@example.com"}
+
+# Allow students to expand by adding more contacts, modifying, or deleting them
